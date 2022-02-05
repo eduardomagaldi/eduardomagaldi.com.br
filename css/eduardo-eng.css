@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+.p1 {
+	background: url("../imagens/bg-eng-texto1.jpg") repeat-x scroll center 0 #131313;
+}
+
+.p2 {
+	background: url("../imagens/bg-eng-texto2.jpg") repeat-x scroll center 0 #131313;
+}
+
+.p3 {
+	background: url("../imagens/bg-eng-texto3.jpg") repeat-x scroll center 0 #131313;
+}
+
+.p4 {
+	background: url("../imagens/bg-eng-texto4.jpg") repeat-x scroll center 0 #131313;
+}
+
+.p5 {
+	background: url("../imagens/bg-eng-texto5.jpg") repeat-x scroll center 0 #131313;
+}
+
+#sobre h2 {
+	margin-left: 15px;
+}
+
+#sobre p {
+    width: 775px;
+}
+
+#outra-lingua {
+    background: url("../imagens/bg-portugues.jpg") no-repeat scroll 0 0 transparent;
+    width: 69px;
+}
