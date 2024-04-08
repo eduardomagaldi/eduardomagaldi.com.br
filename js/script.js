@@ -176,6 +176,11 @@ const $contato = document.querySelector("#contato");
 
 $contato.addEventListener("mouseover", (event) => {
   console.log("event", event);
+  const target = event.target;
+
+  console.log("target", target);
+
+  console.log("target.parentNode", target.parentNode);
 });
 
 // 		jQuery("a#cms, a#portfolio, a#contato").hover(
