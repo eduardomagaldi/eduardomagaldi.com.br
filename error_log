@@ -1,2 +1,0 @@
-[26-Feb-2012 17:39:02] PHP Fatal error:  Call to a member function addPart() on a non-object in /home/eduardo/public_html/EDUARDO/enviar.php on line 13
-[26-Feb-2012 17:40:08] PHP Fatal error:  Call to undefined method Postmark::message() in /home/eduardo/public_html/EDUARDO/enviar.php on line 19
