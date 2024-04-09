@@ -1,3 +1,83 @@
+const $menuItems = document.querySelectorAll(".menu-item");
+$menuItems.forEach(($menuItem) => {
+  $menuItem.addEventListener("mouseenter", (event) => {
+    const target = event.target;
+    let $content = target.parentNode.parentNode.parentNode.parentNode;
+    $content = $content.querySelector(".conteudo");
+
+    $content.classList.add("peek");
+  });
+
+  $menuItem.addEventListener("mouseleave", (event) => {
+    const target = event.target;
+    let $content = target.parentNode.parentNode.parentNode.parentNode;
+    $content = $content.querySelector(".conteudo");
+    $content.classList.remove("peek");
+  });
+
+  $menuItem.addEventListener("click", (event) => {
+    const target = event.target;
+    let $content = target.parentNode.parentNode.parentNode.parentNode;
+    $content = $content.querySelector(".conteudo");
+    closeAllOtherContents($content);
+
+    onClick($content);
+  });
+});
+
+const $domainItems = document.querySelectorAll(".dominio");
+$domainItems.forEach(($item) => {
+  $item.addEventListener("mouseenter", (event) => {
+    toggleHover(true);
+  });
+
+  $item.addEventListener("mouseleave", (event) => {
+    toggleHover(false);
+  });
+});
+
+const $links = document.querySelectorAll(".link");
+$links.forEach(($link) => {
+  $link.addEventListener("click", (event) => {
+    closeAllOtherContents();
+    const goTo = $link.getAttribute("data-go-to");
+    if (goTo) {
+      const $content = document.querySelector(".conteudo." + goTo);
+      onClick($content);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+});
+
+function toggleHover(on) {
+  const $domainItems = document.querySelectorAll(".dominio");
+
+  $domainItems.forEach(($item) => {
+    if (!on) {
+      $item.classList.remove("hover");
+    } else {
+      $item.classList.add("hover");
+    }
+  });
+}
+
+function onClick($content) {
+  if ($content.classList.contains("open")) {
+    $content.classList.remove("open");
+  } else {
+    $content.classList.add("open");
+  }
+}
+
+function closeAllOtherContents($contentNotToClose) {
+  const $contents = document.querySelectorAll(".conteudo");
+  $contents.forEach(($content) => {
+    if ($content !== $contentNotToClose) {
+      $content.classList.remove("open");
+    }
+  });
+}
+
 /*
 
 Author: Eduardo Magaldi
@@ -9,7 +89,7 @@ Author: Eduardo Magaldi
 //   window.location.href.match(/eng/gi)
 // ) {
 //   var html_port =
-//     '<div class="list_carousel responsive" > <ul id="lista-jobs">  <li> <a class="adicione"> <img class="portfolio" src="/imagens/print-add.jpg" alt="http://www.clinicamedservice.com.br"/> </a> </li>  <li> <a target="_blank" href="http://www.clinicamedservice.com.br"> <img class="portfolio" src="/imagens/print-medservice.jpg" alt="http://www.clinicamedservice.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Code</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.bm-group.com.br"> <img class="portfolio" src="/imagens/print-bmgroup.jpg" alt="http://www.bm-group.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Code</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.mkcomex.com"> <img class="portfolio" src="/imagens/print-mk.jpg" alt="http://www.mkcomex.com"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.authosp.com.br"> <img class="portfolio" src="/imagens/print-authosp.jpg" alt="http://www.authosp.com.br"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.clinicamedservice.com.br"> <img class="portfolio" src="/imagens/print-medservice.jpg" alt="http://www.clinicamedservice.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Code</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.bm-group.com.br"> <img class="portfolio" src="/imagens/print-bmgroup.jpg" alt="http://www.bm-group.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Code</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.mkcomex.com"> <img class="portfolio" src="/imagens/print-mk.jpg" alt="http://www.mkcomex.com"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.authosp.com.br"> <img class="portfolio" src="/imagens/print-authosp.jpg" alt="http://www.authosp.com.br"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  </ul>  <div class="clearfix"></div>  <a id="prev" class="arrow" href="#"></a> <a id="next" class="arrow" href="#"></a> </div>';
+//     '';
 // } else {
 //   var html_port =
 //     '<div class="list_carousel responsive" > <ul id="lista-jobs">  <li> <a class="adicione"> <img class="portfolio" src="/imagens/print-adicione.jpg" alt="http://www.clinicamedservice.com.br"/> </a> </li>  <li> <a target="_blank" href="http://www.clinicamedservice.com.br"> <img class="portfolio" src="/imagens/print-medservice.jpg" alt="http://www.clinicamedservice.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Programa&ccedil;&atilde;o</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.bm-group.com.br"> <img class="portfolio" src="/imagens/print-bmgroup.jpg" alt="http://www.bm-group.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Programa&ccedil;&atilde;o</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.mkcomex.com"> <img class="portfolio" src="/imagens/print-mk.jpg" alt="http://www.mkcomex.com"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.authosp.com.br"> <img class="portfolio" src="/imagens/print-authosp.jpg" alt="http://www.authosp.com.br"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.clinicamedservice.com.br"> <img class="portfolio" src="/imagens/print-medservice.jpg" alt="http://www.clinicamedservice.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Programa&ccedil;&atilde;o</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.bm-group.com.br"> <img class="portfolio" src="/imagens/print-bmgroup.jpg" alt="http://www.bm-group.com.br"/> <span class="wrap"> <span class="freelancer menor">Freelancer</span> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> <span class="programacao maior"><img class="icon" src="/imagens/icon-code.png" alt=""/><span>Programa&ccedil;&atilde;o</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.mkcomex.com"> <img class="portfolio" src="/imagens/print-mk.jpg" alt="http://www.mkcomex.com"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  <li> <a target="_blank" href="http://www.authosp.com.br"> <img class="portfolio" src="/imagens/print-authosp.jpg" alt="http://www.authosp.com.br"/> <span class="wrap"> <span class="design maior"><img class="icon" src="/imagens/icon-design.png" alt=""/><span>Design</span></span> </span> </a> </li>  </ul>  <div class="clearfix"></div>  <a id="prev" class="arrow" href="#"></a> <a id="next" class="arrow" href="#"></a> </div>';
@@ -172,16 +252,16 @@ http://www.iwebtool.com/html_optimizer
 
 // 		});
 
-const $contato = document.querySelector("#contato");
+// $menuItems.forEach(($menuItem) => {
+//   console.log("$menuItem", $menuItem);
 
-$contato.addEventListener("mouseover", (event) => {
-  console.log("event", event);
-  const target = event.target;
-
-  console.log("target", target);
-
-  console.log("target.parentNode", target.parentNode);
-});
+//   $menuItem.addEventListener("mouseleave", (event) => {
+//     const target = event.target;
+//     let $content = target.parentNode.parentNode.parentNode.parentNode;
+//     $content = $content.querySelector(".conteudo");
+//     $content.classList.remove("peek");
+//   });
+// });
 
 // 		jQuery("a#cms, a#portfolio, a#contato").hover(
 
@@ -293,75 +373,75 @@ $contato.addEventListener("mouseover", (event) => {
 
 // });
 
-window.menu = function menu(id) {
-  console.log("menu");
+// window.menu = function menu(id) {
+//   console.log("menu");
 
-  var id_seletor = "#" + id;
+//   var id_seletor = "#" + id;
 
-  abrir(id);
+//   abrir(id);
 
-  if (jQuery(id_seletor).hasClass("open")) {
-    rolar(id);
-  }
-};
+//   if (jQuery(id_seletor).hasClass("open")) {
+//     rolar(id);
+//   }
+// };
 
-function atalho(id) {
-  var id_seletor = "#" + id;
+// function atalho(id) {
+//   var id_seletor = "#" + id;
 
-  if (!jQuery(id_seletor).hasClass("open")) {
-    abrir(id);
-  }
+//   if (!jQuery(id_seletor).hasClass("open")) {
+//     abrir(id);
+//   }
 
-  rolar(id);
-}
+//   rolar(id);
+// }
 
-function abrir(id) {
-  var id_seletor = "#" + id;
+// function abrir(id) {
+//   var id_seletor = "#" + id;
 
-  jQuery("a#cms, a#portfolio, a#contato").not(id_seletor).removeClass("open");
+//   jQuery("a#cms, a#portfolio, a#contato").not(id_seletor).removeClass("open");
 
-  if (jQuery(id_seletor).hasClass("open")) {
-    jQuery(id_seletor).removeClass("open");
-  } else {
-    jQuery(id_seletor).addClass("open");
-  }
+//   if (jQuery(id_seletor).hasClass("open")) {
+//     jQuery(id_seletor).removeClass("open");
+//   } else {
+//     jQuery(id_seletor).addClass("open");
+//   }
 
-  jQuery("div.conteudo-hover").hide();
+//   jQuery("div.conteudo-hover").hide();
 
-  jQuery("div.conteudo.animado .inner:visible").slideUp();
-  jQuery("div.animado." + id + " .inner:hidden").slideToggle();
+//   jQuery("div.conteudo.animado .inner:visible").slideUp();
+//   jQuery("div.animado." + id + " .inner:hidden").slideToggle();
 
-  if (id == "portfolio") {
-    jQuery("#load").html(html_port);
+//   if (id == "portfolio") {
+//     jQuery("#load").html(html_port);
 
-    jQuery(".adicione").attr("href", "javascript:atalho('contato');");
+//     jQuery(".adicione").attr("href", "javascript:atalho('contato');");
 
-    jQuery("#lista-jobs").carouFredSel({
-      width: "100%",
-      scroll: 2,
-      prev: "#prev",
-      next: "#next",
-      auto: false,
-      items: {
-        visible: {
-          min: 5,
-          max: 30,
-        },
-      },
-    });
-  }
-}
+//     jQuery("#lista-jobs").carouFredSel({
+//       width: "100%",
+//       scroll: 2,
+//       prev: "#prev",
+//       next: "#next",
+//       auto: false,
+//       items: {
+//         visible: {
+//           min: 5,
+//           max: 30,
+//         },
+//       },
+//     });
+//   }
+// }
 
-function rolar(id) {
-  var aaa = {
-    contato: 0,
-    cms: 90,
-    portfolio: 300,
-  };
+// function rolar(id) {
+//   var aaa = {
+//     contato: 0,
+//     cms: 90,
+//     portfolio: 300,
+//   };
 
-  var id_seletor = "#" + id;
+//   var id_seletor = "#" + id;
 
-  var altura = aaa[id];
+//   var altura = aaa[id];
 
-  $("html, body").animate({ scrollTop: altura }, 800);
-}
+//   $("html, body").animate({ scrollTop: altura }, 800);
+// }

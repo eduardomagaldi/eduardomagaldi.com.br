@@ -40,10 +40,44 @@
   width: 69px;
 }
 
-.menu-item {
+.menu-item,
+.dominio {
   transition: color 0.3s;
+  cursor: pointer;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.dominio.hover {
   color: #e4e4e4;
+}
+
+#lista-jobs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#lista-jobs > li {
+  position: relative;
+  border-left: 1px solid #919191;
+  border-bottom: 1px solid #919191;
+}
+
+#lista-jobs > li.last {
+  border-right: 1px solid #919191;
+}
+
+.fade {
+  transition: opacity 0.3s;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover .fade {
+  opacity: 0;
+}
+
+.initial-line {
+  height: 18px;
 }

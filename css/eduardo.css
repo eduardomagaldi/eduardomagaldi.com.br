@@ -2,242 +2,248 @@
 /* CSS Document */
 
 :focus {
-	outline: none;
+  outline: none;
 }
 
 @font-face {
-    font-family: 'LeagueGothicRegular';
-    src: url('../fontes/League_Gothic-webfont.eot');
-    src: url('../fontes/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fontes/League_Gothic-webfont.woff') format('woff'),
-         url('../fontes/League_Gothic-webfont.ttf') format('truetype'),
-         url('../fontes/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "LeagueGothicRegular";
+  src: url("../fontes/League_Gothic-webfont.eot");
+  src: url("../fontes/League_Gothic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fontes/League_Gothic-webfont.woff") format("woff"),
+    url("../fontes/League_Gothic-webfont.ttf") format("truetype"),
+    url("../fontes/League_Gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
-	min-width: 1000px;
+  min-width: 1000px;
 }
 
 body {
-    background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
 }
 
-.topo{
-    clear: both;
-    float: none;
-    overflow: hidden;
+.topo {
+  clear: both;
+  float: none;
+  overflow: hidden;
 }
 
-.p p  {
-    background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
-    display: block;
-    height: 68px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-top: 6px;
-    position: relative;
-    top: -5px;
-    width: 983px;
-    z-index: 0;
+.p p {
+  background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
+  display: block;
+  height: 68px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 6px;
+  position: relative;
+  top: -5px;
+  width: 983px;
+  z-index: 0;
 }
 
 .p.nome p {
-    float: left;
-    width: 760px;
+  float: left;
+  width: 760px;
 }
 
 .p.nome {
-	width: 993px;
-	margin: 0 auto;
+  width: 993px;
+  margin: 0 auto;
 }
 
 .centralizar {
-	width: 983px;
-	margin: 0 auto;
-	position: relative;
+  width: 983px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .sobre .centralizar {
-	width: 983px;
-	margin: 0 auto;
-	height: 385px;
-	overflow: visible;
-	position: relative;
+  width: 983px;
+  margin: 0 auto;
+  height: 385px;
+  overflow: visible;
+  position: relative;
 }
 
 #texto * {
-	text-align: right;
-	line-height: 10px;
+  text-align: right;
+  line-height: 10px;
 }
 
-h3, h1 {
-    font-family: 'LeagueGothicRegular';
-	font-size: 30px;
-	color: #0d2d5c;
+h3,
+h1 {
+  font-family: "LeagueGothicRegular";
+  font-size: 30px;
+  color: #0d2d5c;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 5px;
-    padding-bottom: 22px;
-    padding-top: 14px;
+  font-size: 48px;
+  margin-bottom: 5px;
+  padding-bottom: 22px;
+  padding-top: 14px;
 }
 
 #texto h3 {
-    height: 20px;
-    margin-bottom: 8px;
-    padding-top: 10px;
+  height: 20px;
+  margin-bottom: 8px;
+  padding-top: 10px;
 }
 
 #texto p {
-    color: #363636;
-    font-size: 14px;
-    margin-bottom: 8px;
+  color: #363636;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 #texto p.curriculo a {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .espaco span {
-	height: 1px;
-	display: block;
+  height: 1px;
+  display: block;
 }
 
 #texto p.espaco {
-	margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 #texto {
-	padding-top: 50px;
+  padding-top: 50px;
 }
 
 .metade {
-    float: left;
-    padding: 24px 0 0;
-    width: 510px;
+  float: left;
+  padding: 24px 0 0;
+  width: 510px;
 }
 
 .terco {
-    width: 329px;
+  width: 329px;
 }
 
 .contato .terco {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .dois-tercos {
-    width: 615px;
+  width: 615px;
 }
 
 .contato .dois-tercos {
-    width: 632px;
+  width: 632px;
 }
 
 .metade strong.azul {
-	color: #0d2d5c;
-	font-family: arial;
+  color: #0d2d5c;
+  font-family: arial;
 }
 
 .metade p {
-    color: #363636;
-    font-family: Arial;
-    font-size: 17px;
-    line-height: 22px;
-    padding: 2px;
+  color: #363636;
+  font-family: Arial;
+  font-size: 17px;
+  line-height: 22px;
+  padding: 2px;
 }
 
-.metade a, #texto a, button {
-	padding: 0 5px;
-	color: #e4e4e4;
-	background: #d59b00;
-	border-radius: 3px;
-	font-weight: bold;
-	border: 1px solid #d59b00;
-	border-top: none;
+.metade a,
+#texto a,
+button {
+  padding: 0 5px;
+  color: #e4e4e4;
+  background: #d59b00;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 1px solid #d59b00;
+  border-top: none;
 }
 
 .curriculo {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 #texto a.simples {
-	background: none;
-	border: none;
-	color: #444644;
-	padding: 0;
+  background: none;
+  border: none;
+  color: #444644;
+  padding: 0;
 }
 
 #texto a.simples:hover {
-	background: none;
-	border: none;
-	padding: 0;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-.metade a:hover, #texto a:hover, button:hover {
-	color: #d59b00;
-	background: #e4e4e4;
-	border: 1px solid #9f9f9f;
-	cursor: pointer;
+.metade a:hover,
+#texto a:hover,
+button:hover {
+  color: #d59b00;
+  background: #e4e4e4;
+  border: 1px solid #9f9f9f;
+  cursor: pointer;
 }
 
 .metade.last {
-    margin-left: 50px;
-    width: 37%;
+  margin-left: 50px;
+  width: 37%;
 }
 
 img {
-	float: left;
-	margin: 0 10px 0 0;
+  float: left;
+  margin: 0 10px 0 0;
 }
 
 .p {
-    /*background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;*/
-    height: 68px;
-    margin: auto;
-    padding-top: 0;
-	z-index: 0;
+  /*background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;*/
+  height: 68px;
+  margin: auto;
+  padding-top: 0;
+  z-index: 0;
 }
 
 .p1 {
-	background: url("../imagens/bg-texto1.jpg") repeat-x scroll center 0 #131313;
+  background: url("../imagens/bg-texto1.jpg") repeat-x scroll center 0 #131313;
 }
 
 .p2 {
-	background: url("../imagens/bg-texto2.jpg") repeat-x scroll center 0 #131313;
+  background: url("../imagens/bg-texto2.jpg") repeat-x scroll center 0 #131313;
 }
 
 .p3 {
-	background: url("../imagens/bg-texto3.jpg") repeat-x scroll center 0 #131313;
+  background: url("../imagens/bg-texto3.jpg") repeat-x scroll center 0 #131313;
 }
 
 .p4 {
-	background: url("../imagens/bg-texto4.jpg") repeat-x scroll center 0 #131313;
+  background: url("../imagens/bg-texto4.jpg") repeat-x scroll center 0 #131313;
 }
 
 .p5 {
-	background: url("../imagens/bg-texto5.jpg") repeat-x scroll center 0 #131313;
+  background: url("../imagens/bg-texto5.jpg") repeat-x scroll center 0 #131313;
 }
 
 .p * {
-    color: #363636;
-    font: 74px/69px 'LeagueGothicRegular';
-    text-align: justify;
+  color: #363636;
+  font: 74px/69px "LeagueGothicRegular";
+  text-align: justify;
 }
 
 .topo .topo {
-	padding-top: 10px;
+  padding-top: 10px;
 }
 
 .topo a {
-    color: #0D2D5C;
-    float: none;
+  color: #0d2d5c;
+  float: none;
 }
 
 .topo .claro {
-    color: #005eea;
+  color: #005eea;
 }
 /*
 .topo a:hover, .hover {
@@ -245,12 +251,12 @@ img {
 }
 */
 .topo p .amarelo {
-	color: #cf9701;
-	float: none;
+  color: #cf9701;
+  float: none;
 }
 
 .topo p .amarelo span {
-	color: #363636 !important;
+  color: #363636 !important;
 }
 /*
 .linha1, .linha1 * {
@@ -281,487 +287,498 @@ img {
 */
 
 .linha-escura {
-	background: #000000;
-	border-bottom: 1px solid #222222;
-	height: 1px;
+  background: #000000;
+  border-bottom: 1px solid #222222;
+  height: 1px;
 }
 
 .conteudo {
-    background: url("../imagens/bg-conteudo.jpg") repeat scroll 0 0 #131313;
-    border-bottom: 1px solid #222222;
-    border-top: 1px solid #000000;
-    /*height: 0;*/
-    overflow: hidden;
-    position: relative;
-	z-index: 1;
+  background: url("../imagens/bg-conteudo.jpg") repeat scroll 0 0 #131313;
+  border-bottom: 1px solid #222222;
+  border-top: 1px solid #000000;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: height 0.3s;
+  height: 0;
+}
+
+.conteudo.peek {
+  height: 4px;
+}
+
+.conteudo.open {
+  height: 300px;
+}
+
+.conteudo.portfolio.open {
+  height: 600px;
+}
+
+.conteudo.portfolio.open .inner {
+  height: 600px;
 }
 
 .conteudo.linha {
-    height: 0;
+  height: 0;
 }
 
 .conteudo.chamada {
-    height: 164px;
+  height: 164px;
 }
 
 .conteudo.sobre {
-    height: 385px;
-	overflow: visible;
+  height: 385px;
+  overflow: visible;
 }
 
 .conteudo-hover {
-	background: url("../imagens/sombra-top.png") repeat-x scroll 0 0 transparent;
-	height: 4px;
-	position: relative;
-	display: none;
+  background: url("../imagens/sombra-top.png") repeat-x scroll 0 0 transparent;
+  height: 4px;
+  position: relative;
+  display: none;
 }
 
 .sombra-top {
-	background: url("../imagens/sombra-top.png") repeat-x scroll 0 0 transparent;
-    top: 0;
-    height: 7px;
-    position: absolute;
-    width: 100%;
-	z-index: 1;
+  background: url("../imagens/sombra-top.png") repeat-x scroll 0 0 transparent;
+  top: 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
 .sombra-bottom {
-    background: url("../imagens/sombra-bottom.png") repeat-x scroll 0 0 transparent;
-    bottom: 0;
-    height: 7px;
-    position: absolute;
-    width: 100%;
+  background: url("../imagens/sombra-bottom.png") repeat-x scroll 0 0
+    transparent;
+  bottom: 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
 }
 
 .inner {
-	height: 300px;
-	position: relative;
-	/* apagar */display: none;
+  height: 300px;
+  position: relative;
 }
 
 .chamada .inner {
-	display: block !important;
-	height: 164px;
+  display: block !important;
+  height: 164px;
 }
 
-#load {
-	z-index: 0;
-}
+/* #load {
+  z-index: 0;
+} */
 
 .sobre .inner {
-	display: block !important;
-	height: 385px;
-	overflow: visible;
+  display: block !important;
+  height: 385px;
+  overflow: visible;
 }
 
 #caricatura {
-	position: absolute;
-	top: -23px;
-	z-index: 1;
-	left: 0;
+  position: absolute;
+  top: -23px;
+  z-index: 1;
+  left: 0;
 }
 
 #wrap-links {
-    background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
-	height: 200px;
+  background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
+  height: 200px;
 }
 
 #links {
-	width: 983px;
-	margin: auto;
-	height: 200px;
-	position: relative;
+  width: 983px;
+  margin: auto;
+  height: 200px;
+  position: relative;
 }
 
-#links .cms *, #links .portfolio *, #links .contato * {
-	cursor: pointer;
+#links .cms *,
+#links .portfolio *,
+#links .contato * {
+  cursor: pointer;
 }
 
 #links a {
-    display: block;
-    float: left;
-    height: 180px;
-    margin: 10px 20px 10px 0;
-    position: relative;
-    width: 230px;
+  display: block;
+  float: left;
+  height: 180px;
+  margin: 10px 20px 10px 0;
+  position: relative;
+  width: 230px;
 }
 
 #links a .img {
-    height: 180px;
-    width: 230px;
-	position: absolute;
+  height: 180px;
+  width: 230px;
+  position: absolute;
 }
 
 #links a .content {
-    height: 180px;
-    width: 230px;
-	position: absolute;
+  height: 180px;
+  width: 230px;
+  position: absolute;
 }
 
 #links .contato {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 #links a.bem-vindo {
-    background: url("../imagens/bg-bemvindo-hover.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-bemvindo-hover.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.cms {
-    background: url("../imagens/bg-cms-hover.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-cms-hover.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.portfolio {
-    background: url("../imagens/bg-portfolio-hover.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-portfolio-hover.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.contato {
-    background: url("../imagens/bg-contato-hover.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-contato-hover.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.bem-vindo .img {
-    background: url("../imagens/bg-bemvindo.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-bemvindo.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.cms .img {
-    background: url("../imagens/bg-cms.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-cms.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.portfolio .img {
-    background: url("../imagens/bg-portfolio.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-portfolio.jpg") repeat scroll 0 0 #131313;
 }
 
 #links a.contato .img {
-    background: url("../imagens/bg-contato.jpg") repeat scroll 0 0 #131313;
+  background: url("../imagens/bg-contato.jpg") repeat scroll 0 0 #131313;
 }
 
 #links .h3 {
-    color: #CF9701;
-    font-family: arial;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 110px;
-    position: absolute;
+  color: #cf9701;
+  font-family: arial;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 110px;
+  position: absolute;
 }
 
 #links .linkp {
-    bottom: 14px;
-    color: #505050;
-    font-size: 12px;
-    margin-right: 10px;
-    margin-top: 15px;
-    position: absolute;
-    text-align: right;
-    width: 221px;
+  bottom: 14px;
+  color: #505050;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-top: 15px;
+  position: absolute;
+  text-align: right;
+  width: 221px;
 }
 
 #links .portfolio .linkp {
-    color: #131313;
+  color: #131313;
 }
 
-#links .bem-vindo .content span, #links .bem-vindo strong {
-    color: #AEAEAE;
-    font-size: 17px;
-    line-height: 33px;
-    margin: 22px 10px 40px 18px;
-    text-align: left;
-	position: absolute;
+#links .bem-vindo .content span,
+#links .bem-vindo strong {
+  color: #aeaeae;
+  font-size: 17px;
+  line-height: 33px;
+  margin: 22px 10px 40px 18px;
+  text-align: left;
+  position: absolute;
 }
 
 .pode {
-	top: 105px;
+  top: 105px;
 }
 
 #links .bem-vindo strong {
-	margin: 0;
+  margin: 0;
 }
 
 .open {
-	color: #e4e4e4 !important;
+  color: #e4e4e4 !important;
 }
 
 .wrap-reticencias {
-    background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
-	height: 99px;
+  background: url("../imagens/bg.jpg") repeat scroll 0 0 #131313;
+  height: 99px;
 }
 
 .reticencias {
-	background: url("../imagens/reticencias.png") no-repeat scroll center center transparent;
-	height: 99px;
+  background: url("../imagens/reticencias.png") no-repeat scroll center center
+    transparent;
+  height: 99px;
 }
 
 #wrap-english {
-	height: 18px;
+  height: 18px;
 }
 
 #outra-lingua {
-    background: url("../imagens/bg-english.jpg") no-repeat scroll 0 0 transparent;
-    color: #6D6D6D;
-    display: block;
-    font-size: 12px;
-    height: 9px;
-    line-height: 9px;
-    margin-top: 3px;
-    padding: 3px 2px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 53px;
-    z-index: 1;
+  background: url("../imagens/bg-english.jpg") no-repeat scroll 0 0 transparent;
+  color: #6d6d6d;
+  display: block;
+  font-size: 12px;
+  height: 9px;
+  line-height: 9px;
+  margin-top: 3px;
+  padding: 3px 2px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 53px;
+  z-index: 1;
 }
 
 #outra-lingua:hover {
-    color: #CF9701;
+  color: #cf9701;
 }
 
 .p h2 {
-	float: left;
-	display: inline;
-	margin-left: 8px;
-	color: #e4e4e4;
+  float: left;
+  display: inline;
+  margin-left: 8px;
+  color: #e4e4e4;
 }
 
 form {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
-input, textarea {
-    border: 1px solid #B3B3B3;
-    border-radius: 5px 5px 5px 5px;
-	background: #e4e4e4;
-    height: 18px;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 610px;
-	color: #0d2d5c;
-	font-size: 14px;
+input,
+textarea {
+  border: 1px solid #b3b3b3;
+  border-radius: 5px 5px 5px 5px;
+  background: #e4e4e4;
+  height: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 610px;
+  color: #0d2d5c;
+  font-size: 14px;
 }
 
 textarea {
-    height: 110px;
-    margin: 0;
-    width: 520px;
-	float: left;
-	resize: none;
+  height: 110px;
+  margin: 0;
+  width: 520px;
+  float: left;
+  resize: none;
 }
 
-#sucesso, .carregando {
-    background: none repeat scroll 0 0 #E4E4E4;
-    border: 1px solid #B3B3B3;
-    border-radius: 5px 5px 5px 5px;
-    height: 230px;
-    width: 628px;
+#sucesso,
+.carregando {
+  background: none repeat scroll 0 0 #e4e4e4;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px 5px 5px 5px;
+  height: 230px;
+  width: 628px;
 }
 
 .carregando {
-    background: url(../imagens/carregando.gif) center center no-repeat #E4E4E4;
-}
-
-#load .carregando {
-    height: 40px;
-    margin: auto;
-    position: relative;
-    top: 130px;
-    width: 50px;
+  background: url(../imagens/carregando.gif) center center no-repeat #e4e4e4;
 }
 
 #sucesso p {
-    color: #0D2D5C;
-    position: relative;
-    text-align: center;
-    top: 53px;
-	width: 628px;
-	margin: auto;
+  color: #0d2d5c;
+  position: relative;
+  text-align: center;
+  top: 53px;
+  width: 628px;
+  margin: auto;
 }
 
 #sucesso p span {
-	font-size: 11px;
-    color: #0D2D5C;
+  font-size: 11px;
+  color: #0d2d5c;
 }
 
 #sucesso p strong {
-    color: #0D2D5C;
+  color: #0d2d5c;
 }
 
-input:focus, textarea:focus {
-    border: 1px solid #d59b00;
-	background: #ffffff;
+input:focus,
+textarea:focus {
+  border: 1px solid #d59b00;
+  background: #ffffff;
 }
 
 .dois-tercos form p {
-    display: block;
-    float: left;
-    font-size: 14px;
-    height: 72px;
-    line-height: 18px;
-    padding: 0 10px 10px;
-    width: 70px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  height: 72px;
+  line-height: 18px;
+  padding: 0 10px 10px;
+  width: 70px;
 }
 
 button {
-    border-radius: 5px 5px 5px 5px;
-    height: 50px;
-    margin-left: 10px;
-    width: 80px;
+  border-radius: 5px 5px 5px 5px;
+  height: 50px;
+  margin-left: 10px;
+  width: 80px;
 }
 
 img.portfolio {
-    border-left: 1px solid #919191;
-    border-right: 1px solid #919191;
-    margin: 0;
+  margin: 0;
 }
 
-img.portfolio.first {
-	border-left: 1px solid #919191;
-}
+/* img.portfolio.first {
+  border-left: 1px solid #919191;
+} */
 
 .portfolio span {
-	display: block;
+  display: block;
 }
 
 .portfolio span.wrap {
-	display: block;
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .portfolio a > span > span {
-    background: url("../imagens/bg-info.png") repeat scroll 0 0 transparent;
-    border-radius: 30px 30px 30px 30px;
-    clear: both;
-    color: #E4E4E4;
-    float: right;
-    font-size: 11px;
-    margin-top: 5px;
-    padding: 2px;
-    text-align: right;
+  background: url("../imagens/bg-info.png") repeat scroll 0 0 transparent;
+  border-radius: 30px 30px 30px 30px;
+  clear: both;
+  color: #e4e4e4;
+  float: right;
+  font-size: 11px;
+  margin-top: 5px;
+  padding: 2px;
+  text-align: right;
 }
 
 .portfolio span > span > span {
-    color: #E4E4E4;
-    padding: 9px 12px 0 48px;
+  color: #e4e4e4;
+  padding: 9px 12px 0 48px;
 }
 
 .portfolio span span img {
-    float: left;
+  float: left;
 }
 
 .portfolio span span.maior {
-    height: 38px;
+  height: 38px;
 }
 
 .portfolio span span.menor {
-    height: 20px;
-    padding: 0 10px;
-}
-
-.portfolio .conteudo-hover {
-    background: url("../imagens/faixa-portfolio.jpg") repeat scroll center 0 transparent;
+  height: 20px;
+  padding: 0 10px;
 }
 
 .cms img.portfolio {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .cms .dois-tercos img {
-    float: none;
-    margin-bottom: 20px;
-    margin-left: 6px;
+  float: none;
+  margin-bottom: 20px;
+  margin-left: 6px;
 }
 
 .cms .faixa {
-    background: url("../imagens/faixa-cms.jpg") no-repeat scroll 0 0 transparent;
-    height: 4px;
-    width: 327px;
+  background: url("../imagens/faixa-cms.jpg") no-repeat scroll 0 0 transparent;
+  height: 4px;
+  width: 327px;
 }
 
 .dois-tercos a {
-	color: #E4E4E4;
+  color: #e4e4e4;
 }
 
 /* carousel */
 
 .list_carousel ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
 }
 .list_carousel li {
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	display: block;
-	float: left;
-	width: 326px !important;
-	height: 300px !important;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 326px !important;
+  height: 300px !important;
 }
 
 .list_carousel li a {
-	position: relative;
-	display: block;
-	width: 326px !important;
-	height: 300px !important;
+  position: relative;
+  display: block;
+  width: 326px !important;
+  height: 300px !important;
 }
 
 .list_carousel.responsive {
-	width: auto;
-	margin-left: 0;
+  width: auto;
+  margin-left: 0;
 }
 .clearfix {
-	float: none;
-	clear: both;
+  float: none;
+  clear: both;
 }
 .arrow {
-	display: block;
-	position: absolute;
-	top: 100px;
-	padding: 10px;
-	margin: 30px;
+  display: block;
+  position: absolute;
+  top: 100px;
+  padding: 10px;
+  margin: 30px;
 }
 #next {
-    background: url("../imagens/right.png") no-repeat scroll 0 0 transparent;
-    height: 24px;
-    right: 0;
-    width: 29px;		
+  background: url("../imagens/right.png") no-repeat scroll 0 0 transparent;
+  height: 24px;
+  right: 0;
+  width: 29px;
 }
 #prev {
-    background: url("../imagens/left.png") no-repeat scroll 0 0 transparent;
-    height: 24px;
-    left: 0;
-    width: 29px;		
+  background: url("../imagens/left.png") no-repeat scroll 0 0 transparent;
+  height: 24px;
+  left: 0;
+  width: 29px;
 }
-#next:hover, #prev:hover  {
-    background-position: 0 -44px;
+#next:hover,
+#prev:hover {
+  background-position: 0 -44px;
 }
 
 .rodape {
-	color: #e4e4e4;
-	font-size: 18px;
-	float: right;
-	margin-left: 20px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+  color: #e4e4e4;
+  font-size: 18px;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 footer {
-	height: 30px;
+  height: 30px;
 }
 
 .rodape span {
-    background: url("../imagens/icon-rodape.png") no-repeat scroll 0 0 transparent;
-    display: block;
-    float: left;
-    height: 14px;
-    margin-right: 5px;
-    margin-top: 4px;
-    width: 14px;
+  background: url("../imagens/icon-rodape.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  float: left;
+  height: 14px;
+  margin-right: 5px;
+  margin-top: 4px;
+  width: 14px;
 }
 
 .rodape:hover span {
-	background-position: 0 -14px;
+  background-position: 0 -14px;
 }
 
 .rodape:hover {
-	color: #D59B00;
+  color: #d59b00;
 }
